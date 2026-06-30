@@ -84,6 +84,12 @@ private:
      */
     bool configurationIsValid() const;
 
+
+    /**
+     * Stima dell'offset.
+     */
+    float estimateInitialOffset();
+
 private:
 
     MonitorConfig _configuration;

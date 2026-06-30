@@ -107,15 +107,15 @@ struct AppearanceConfig
 
 struct Measurement
 {
-    uint32_t timestamp;
+    float irms;                    // Corrente RMS [A]
 
-    float irms;
+    float apparentPowerVA;         // Potenza apparente [VA]
 
-    float power;
+    float offset;                  // Offset ADC
 
-    uint16_t samples;
+    uint32_t acquisitionTime;      // Tempo di acquisizione [µs]
 
-    uint32_t acquisitionTime;
+    uint16_t sampleCount;          // Numero di campioni
 
     bool valid;
 };

@@ -1,4 +1,4 @@
-##ifndef CONFIG_H
+#ifndef CONFIG_H
 #define CONFIG_H
 
 /**
@@ -34,7 +34,7 @@ namespace Defaults
 
         constexpr float AdcReference = 3.3f;
 
-        constexpr uint16_t AdcResolution = 4095;
+        constexpr uint16_t adcBits = 12;
 
         constexpr uint16_t Samples = 1440;
 
@@ -117,6 +117,11 @@ namespace Limits
 namespace Constants
 {
     constexpr float OffsetFilter = 1.0f / 1024.0f;
+}
+
+namespace Build
+{
+    constexpr bool TestMode = false;
 }
 
 #endif
